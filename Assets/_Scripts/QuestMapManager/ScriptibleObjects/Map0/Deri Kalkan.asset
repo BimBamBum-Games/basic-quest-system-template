@@ -16,7 +16,7 @@ MonoBehaviour:
   questItemName: Deri Kalkan
   description: "Deri Kalkan\u0131 temin et."
   price: 3
-  IsPurchased: 0
+  IsPurchased: 1
   localPosition: {x: 0, y: 0, z: 0}
   priority: 0
   IsCurrent: 0

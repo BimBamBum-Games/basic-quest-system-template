@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-
 
 namespace _Scripts.QuestMapManager.Scripts {
 
@@ -33,17 +31,7 @@ namespace _Scripts.QuestMapManager.Scripts {
 
                 //Key olusturuldugunda veya var ise de olusan keydeki listeye itemi ekler.
                 priorityGroups[item.priority].Add(item);
-            }
-
-            //Debug.LogWarning($"Dict Group Count > {priorityGroups.Count}");
-
-            //foreach (var dsc in priorityGroups) {
-            //    foreach(var li in dsc.Value) {
-            //        Debug.LogWarning($"Dict Group Count > {li.name}");
-            //    }
-                
-            //}
-            
+            }         
         }
 
         void FindQuestItemsToDisplay() {
@@ -55,16 +43,10 @@ namespace _Scripts.QuestMapManager.Scripts {
             //Her bir list grubunu gezer.
             foreach (var ls in priorityGroups) {
 
-                bool all_purchased_in_this_list = false;
-
                 //Her bir list grubundaki o gruba ait itemleri gezer.
                 foreach (QuestItemSO item in ls.Value) {
-                    if (item.IsPurchased == true) {
-                        all_purchased_in_this_list = true;
-                    }
-                    else {
+                    if (item.IsPurchased == false) {
                         itemsToDisplay.Add(item);
-                        all_purchased_in_this_list = false;
                         dont_look_at_further = true;
                     }
                 }

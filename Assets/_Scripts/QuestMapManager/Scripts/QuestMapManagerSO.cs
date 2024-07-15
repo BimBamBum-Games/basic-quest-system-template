@@ -18,13 +18,12 @@ namespace _Scripts.QuestMapManager.Scripts {
                 List<QuestItemSO> questItems = qms.GetDisplayable();
                 foreach(var item in questItems) {
                     Debug.LogWarning($"-{item.name}");
-                }
-                
-                //qms.ShowRelations();
+                }               
             }
         }
     }
 
+#if UNITY_EDITOR
     [CustomEditor(typeof(QuestMapManagerSO), true)]
     public class QuestMapManagerEditor : Editor {
 
@@ -36,12 +35,12 @@ namespace _Scripts.QuestMapManager.Scripts {
 
         public override void OnInspectorGUI() {
             base.OnInspectorGUI();
-            if(GUILayout.Button("Show Relations")) {
+            if (GUILayout.Button("Show Relations")) {
                 context.ShowRelations();
             }
         }
     }
-
+#endif
 }
 
 
