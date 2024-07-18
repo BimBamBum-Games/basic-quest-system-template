@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace _Scripts.QuestMapManager.Scripts {
+namespace JuniusGame.QuestMapManager.Scripts {
 
     [CreateAssetMenu(fileName = "Quest Map SO", menuName = "Quest Map System/Quest Map SO")]
     public class QuestMapSO : ScriptableObject {
@@ -11,6 +11,18 @@ namespace _Scripts.QuestMapManager.Scripts {
 
         public void OnEnable() {
             MapName = name;
+        }
+
+        public void ResetQuestItemSOs() {
+            foreach(var item in itemsSOs) {
+                item.ResetFields();
+            }
+        }
+
+        public void ResetAll() {
+            foreach (var item in itemsSOs) {
+                item.ResetItemFields();
+            }
         }
 
         private List<QuestItemSO> itemsToDisplay = new List<QuestItemSO>();

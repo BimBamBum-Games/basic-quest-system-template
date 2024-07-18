@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace _Scripts.QuestMapManager.Scripts {
+namespace JuniusGame.QuestMapManager.Scripts {
 
     [CreateAssetMenu(fileName = "Quest Map Manager SO", menuName = "Quest Map System/Quest Map Manager SO")]
     public class QuestMapManagerSO : ScriptableObject {
@@ -21,6 +21,20 @@ namespace _Scripts.QuestMapManager.Scripts {
                 }               
             }
         }
+
+        public void ResetQuestMaps() {
+            foreach (var maps in questMapsSOs) {
+                maps.ResetQuestItemSOs();
+            }
+        }
+
+        [ContextMenu("Reset Maps and Quest Items")]
+        public void ResetAll() {
+            foreach (var maps in questMapsSOs) {
+                maps.ResetAll();
+            }
+        }
+
     }
 
 #if UNITY_EDITOR

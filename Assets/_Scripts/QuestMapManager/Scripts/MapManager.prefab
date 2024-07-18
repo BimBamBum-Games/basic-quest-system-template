@@ -45,8 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questMapManagerSO: {fileID: 11400000, guid: 1eaa547afe963954094c3339c3b6f8f8, type: 2}
+  canvasGroup: {fileID: 0}
   parentContent: {fileID: 0}
   questMapBtn: {fileID: 2603422572148475756, guid: 40eedf860ae9984448145b0acd0f82b2,
     type: 3}
   currentMapIndex: 0
   lastMapSO: {fileID: 0}
+  questMapRectWrapper: {fileID: 0}
+  itemSceneField: {fileID: 0}
+  userIngredients:
+    Coins: 500
+  IsIEnumeratorActive: 0
