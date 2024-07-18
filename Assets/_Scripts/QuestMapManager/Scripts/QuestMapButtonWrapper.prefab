@@ -105,7 +105,7 @@ RectTransform:
   m_GameObject: {fileID: 1324681450616266889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1830981869660008384}
@@ -134,6 +134,9 @@ MonoBehaviour:
   questDescription: {fileID: 547353675851563683}
   priceTmp: {fileID: 17313200409371117}
   questMapBtn: {fileID: 2603422572148475756}
+  questItemSO: {fileID: 11400000, guid: f65bad2bdc8cbf746b69bf54f65744ec, type: 2}
+  userIngredients:
+    Coins: 500
 --- !u!114 &9065577102729858612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,7 +667,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1558353032917918024}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2603422572148475756}
+        m_TargetAssemblyTypeName: JuniusGame.QuestMapManager.Scripts.QuestMapButtonWrapper,
+          Assembly-CSharp
+        m_MethodName: SelectQuestButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9147412194766784861
 GameObject:
   m_ObjectHideFlags: 0

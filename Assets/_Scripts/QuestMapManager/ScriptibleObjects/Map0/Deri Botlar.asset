@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971334bcbdca6c248ad3f4c8d562e99d, type: 3}
   m_Name: Deri Botlar
   m_EditorClassIdentifier: 
-  itemGO: {fileID: 0}
+  itemGO: {fileID: 6849164546262518507, guid: 2f2fd2857c89e394886135fa61b06c76, type: 3}
   questItemName: Deri Botlar
   description: Deri botlari terzide onar.
   price: 7
-  IsPurchased: 1
+  IsPurchased: 0
   localPosition: {x: 0, y: 0, z: 0}
   priority: 0
   IsCurrent: 0
+  hasQuestMapButtonWrapper: 0
